@@ -16,7 +16,7 @@ jobs:
           path: ~/.cache/my-deps
           key: cache-2b11042
 
-      - name: Display cache result
+      - name: Echo cache hit/miss
         run: |
           if [ "${{ steps.cache-step.outputs.cache-hit }}" = 'true' ]; then
             echo 'Cache hit! Dependencies loaded from cache.'
